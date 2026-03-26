@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="page-title">
+    <text class="title-lg">☕ 咖啡豆</text>
+  </view>
+
+  <view class="loading" wx:if="{{loading}}">
+    <text class="loading-text">加载中...</text>
+  </view>
+
+  <view class="bean-list" wx:if="{{!loading}}">
+    <view class="card bean-card" wx:for="{{beans}}" wx:key="id" bindtap="onBeanClick" data-id="{{item.id}}">
+      <view class="bean-header">
+        <text class="title-md">{{item.name}}</text>
+        <text class="badge badge-warm" wx:if="{{item.status}}">{{item.status}}</text>
+      </view>
+      <view class="bean-tags">
+        <text class="badge badge-warm" wx:if="{{item.roastLevel}}">{{item.roastLevel}}</text>
+        <text class="badge badge-outline" wx:if="{{item.process}}">{{item.process}}</text>
+        <text class="badge badge-outline" wx:if="{{item.roaster}}">{{item.roaster.name}}</text>
+      </view>
+      <text class="text-muted bean-origin" wx:if="{{item.origin}}">{{item.origin}}</text>
+      <text class="bean-flavor" wx:if="{{item.flavorNotes}}">{{item.flavorNotes}}</text>
+    </view>
+  </view>
+
+  <view class="empty" wx:if="{{!loading && beans.length === 0}}">
+    <text>暂无咖啡豆</text>
+  </view>
+</view>

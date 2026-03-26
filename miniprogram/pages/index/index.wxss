@@ -1,0 +1,56 @@
+.header {
+  padding: 40rpx 0 24rpx;
+}
+
+.header-title {
+  display: block;
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #8B7355;
+  letter-spacing: -1rpx;
+  line-height: 1.2;
+}
+
+.header-sub {
+  display: block;
+  font-size: 24rpx;
+  color: #9C9490;
+  margin-top: 8rpx;
+  letter-spacing: 1rpx;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16rpx;
+  padding: 8rpx 0;
+}
+
+.news-source {
+  flex-shrink: 0;
+  margin-top: 4rpx;
+  white-space: nowrap;
+}
+
+.news-title {
+  font-size: 28rpx;
+  color: #2C2825;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

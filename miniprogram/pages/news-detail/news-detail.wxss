@@ -1,0 +1,41 @@
+.article-header {
+  padding: 24rpx 0;
+}
+
+.article-title {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #2C2825;
+  line-height: 1.4;
+  margin-top: 16rpx;
+}
+
+.article-content {
+  padding: 16rpx 0;
+}
+
+.article-body {
+  font-size: 30rpx;
+  color: #2C2825;
+  line-height: 2;
+  white-space: pre-line;
+}
+
+.article-footer {
+  padding: 40rpx 0;
+}
+
+.link-btn {
+  display: flex;
+  justify-content: center;
+  padding: 24rpx;
+  background: #F5F0EB;
+  border-radius: 12rpx;
+}
+
+.link-text {
+  font-size: 28rpx;
+  color: #8B7355;
+  font-weight: 500;
+}

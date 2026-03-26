@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="page-title">
+    <text class="title-lg">📖 知识库</text>
+    <text class="text-muted" style="margin-top: 8rpx;">咖啡世界的百科全书</text>
+  </view>
+
+  <view class="category-grid">
+    <view class="category-card card" bindtap="onCategoryClick" data-type="regions">
+      <text class="category-icon">🌍</text>
+      <text class="category-name">产区</text>
+      <text class="category-desc">咖啡产地与风味</text>
+    </view>
+    <view class="category-card card" bindtap="onCategoryClick" data-type="roasters">
+      <text class="category-icon">🔥</text>
+      <text class="category-name">烘焙商</text>
+      <text class="category-desc">精品咖啡烘焙师</text>
+    </view>
+    <view class="category-card card" bindtap="onCategoryClick" data-type="brew-methods">
+      <text class="category-icon">☕</text>
+      <text class="category-name">冲煮方法</text>
+      <text class="category-desc">手冲、摩卡壶等</text>
+    </view>
+    <view class="category-card card" bindtap="onCategoryClick" data-type="varieties">
+      <text class="category-icon">🌱</text>
+      <text class="category-name">品种</text>
+      <text class="category-desc">阿拉比卡家族</text>
+    </view>
+    <view class="category-card card" bindtap="onCategoryClick" data-type="processing">
+      <text class="category-icon">🧪</text>
+      <text class="category-name">处理法</text>
+      <text class="category-desc">水洗、日晒、蜜处理</text>
+    </view>
+    <view class="category-card card" bindtap="onCategoryClick" data-type="recipes">
+      <text class="category-icon">🍞</text>
+      <text class="category-name">面包制作</text>
+      <text class="category-desc">烘焙配方与笔记</text>
+    </view>
+  </view>
+</view>

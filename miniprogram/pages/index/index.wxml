@@ -1,0 +1,45 @@
+<view class="container">
+  <!-- Header -->
+  <view class="header">
+    <text class="header-title">咖啡，面包，好天气</text>
+    <text class="header-sub">记录每一天的好味道</text>
+  </view>
+
+  <!-- Loading -->
+  <view class="loading" wx:if="{{loading}}">
+    <text class="loading-text">加载中...</text>
+  </view>
+
+  <!-- Today's News -->
+  <view class="card" wx:if="{{!loading && todayNews.length > 0}}">
+    <view class="card-header">
+      <text class="title-sm">☕ 今日咖啡</text>
+      <text class="text-hint">{{today}}</text>
+    </view>
+    <view class="news-list">
+      <view class="news-item" wx:for="{{todayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
+        <view class="news-source badge {{item.sourceClass || 'badge-outline'}}">{{item.source}}</view>
+        <text class="news-title">{{item.titleZh || item.title}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Yesterday's News -->
+  <view class="card" wx:if="{{!loading && yesterdayNews.length > 0}}">
+    <view class="card-header">
+      <text class="title-sm">📰 昨日咖啡</text>
+      <text class="text-hint">{{yesterday}}</text>
+    </view>
+    <view class="news-list">
+      <view class="news-item" wx:for="{{yesterdayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
+        <view class="news-source badge {{item.sourceClass || 'badge-outline'}}">{{item.source}}</view>
+        <text class="news-title">{{item.titleZh || item.title}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Empty -->
+  <view class="empty" wx:if="{{!loading && todayNews.length === 0 && yesterdayNews.length === 0}}">
+    <text>暂无新闻</text>
+  </view>
+</view>

@@ -1,0 +1,73 @@
+<view class="container" wx:if="{{!loading && bean}}">
+  <!-- Name & Status -->
+  <view class="detail-header">
+    <text class="title-lg">{{bean.name}}</text>
+    <text class="badge badge-warm" wx:if="{{bean.status}}" style="margin-left: 12rpx;">{{bean.status}}</text>
+  </view>
+
+  <!-- Tags -->
+  <view class="detail-tags">
+    <text class="badge badge-warm" wx:if="{{bean.roastLevel}}">{{bean.roastLevel}}</text>
+    <text class="badge badge-outline" wx:if="{{bean.process}}">{{bean.process}}</text>
+    <text class="badge badge-outline" wx:if="{{bean.batch}}">批次 {{bean.batch}}</text>
+    <text class="badge badge-outline" wx:if="{{bean.roaster}}">{{bean.roaster.name}}</text>
+  </view>
+
+  <!-- Info Card -->
+  <view class="card">
+    <view class="info-row" wx:if="{{bean.origin}}">
+      <text class="info-label">产地</text>
+      <text class="info-value">{{bean.origin}}</text>
+    </view>
+    <view class="info-row" wx:if="{{bean.region}}">
+      <text class="info-label">产区</text>
+      <text class="info-value">{{bean.region.country}} · {{bean.region.region}}</text>
+    </view>
+    <view class="info-row" wx:if="{{bean.altitude}}">
+      <text class="info-label">海拔</text>
+      <text class="info-value">{{bean.altitude}}</text>
+    </view>
+    <view class="info-row" wx:if="{{bean.species}}">
+      <text class="info-label">豆种</text>
+      <text class="info-value">{{bean.species}}</text>
+    </view>
+    <view class="info-row" wx:if="{{bean.producer}}">
+      <text class="info-label">生产者</text>
+      <text class="info-value">{{bean.producer}}</text>
+    </view>
+    <view class="info-row" wx:if="{{bean.roastInfo}}">
+      <text class="info-label">烘焙</text>
+      <text class="info-value">{{bean.roastInfo}}</text>
+    </view>
+  </view>
+
+  <!-- Flavor -->
+  <view class="card" wx:if="{{bean.flavorNotes}}">
+    <text class="title-sm">风味描述</text>
+    <text class="flavor-text">{{bean.flavorNotes}}</text>
+  </view>
+
+  <!-- Notes -->
+  <view class="card" wx:if="{{bean.notes}}">
+    <text class="title-sm">详情</text>
+    <text class="notes-text">{{bean.notes}}</text>
+  </view>
+
+  <!-- Purchases -->
+  <view class="card" wx:if="{{bean.purchases && bean.purchases.length > 0}}">
+    <text class="title-sm">购买记录</text>
+    <view class="purchase-list">
+      <view class="purchase-item" wx:for="{{bean.purchases}}" wx:key="id">
+        <view class="purchase-main">
+          <text class="purchase-price">¥{{item.price}}</text>
+          <text class="text-muted">{{item.weight}}g</text>
+        </view>
+        <text class="text-hint">{{item.source || ''}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="loading" wx:if="{{loading}}">
+  <text class="loading-text">加载中...</text>
+</view>

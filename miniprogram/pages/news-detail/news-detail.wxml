@@ -1,0 +1,27 @@
+<view class="container" wx:if="{{!loading && article}}">
+  <view class="article-header">
+    <text class="badge {{article.sourceClass || 'badge-outline'}}">{{article.source}}</text>
+    <text class="article-title">{{article.titleZh || article.title}}</text>
+    <text class="text-hint" wx:if="{{article.title !== article.titleZh}}">{{article.title}}</text>
+  </view>
+
+  <view class="divider"></view>
+
+  <view class="article-content" wx:if="{{article.content}}">
+    <text class="article-body">{{article.content}}</text>
+  </view>
+
+  <view class="article-content" wx:if="{{article.summary && !article.content}}">
+    <text class="article-body">{{article.summary}}</text>
+  </view>
+
+  <view class="article-footer">
+    <view class="link-btn" bindtap="onOpenLink">
+      <text class="link-text">📋 复制原文链接</text>
+    </view>
+  </view>
+</view>
+
+<view class="loading" wx:if="{{loading}}">
+  <text class="loading-text">加载中...</text>
+</view>

@@ -1,0 +1,36 @@
+.page-title {
+  padding: 32rpx 0 24rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20rpx;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 24rpx;
+  text-align: center;
+}
+
+.category-icon {
+  font-size: 56rpx;
+  margin-bottom: 16rpx;
+}
+
+.category-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2C2825;
+  margin-bottom: 8rpx;
+}
+
+.category-desc {
+  font-size: 22rpx;
+  color: #B8B0A8;
+}

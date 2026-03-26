@@ -1,7 +1,7 @@
 /* Global styles - Nordic magazine feel */
 page {
-  background-color: #FAF8F5;
-  color: #2C2825;
+  background-color: #EDE5D8;
+  color: #3A2E25;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Noto Serif SC', serif;
   font-size: 28rpx;
   line-height: 1.6;

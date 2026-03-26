@@ -1,8 +1,28 @@
-<view class="container">
-  <!-- Header -->
-  <view class="header">
-    <text class="header-title">咖啡，面包，好天气</text>
-    <text class="header-sub">记录每一天的好味道</text>
+<view class="home-container">
+  <!-- Hero -->
+  <view class="hero">
+    <text class="hero-icon">☕</text>
+    <text class="hero-title">COFFEE JOURNAL</text>
+    <text class="hero-sub">面包 · 咖啡 · 好天气</text>
+  </view>
+
+  <!-- Quick entry -->
+  <view class="entry-grid">
+    <view class="entry-card" bindtap="goToBeans">
+      <text class="entry-icon">🫘</text>
+      <text class="entry-label">咖啡豆</text>
+      <text class="entry-sub">My Beans</text>
+    </view>
+    <view class="entry-card" bindtap="goToKnowledge">
+      <text class="entry-icon">📖</text>
+      <text class="entry-label">知识库</text>
+      <text class="entry-sub">Knowledge</text>
+    </view>
+    <view class="entry-card" bindtap="goToPurchases">
+      <text class="entry-icon">💰</text>
+      <text class="entry-label">消费</text>
+      <text class="entry-sub">Spending</text>
+    </view>
   </view>
 
   <!-- Loading -->
@@ -11,29 +31,33 @@
   </view>
 
   <!-- Today's News -->
-  <view class="card" wx:if="{{!loading && todayNews.length > 0}}">
-    <view class="card-header">
-      <text class="title-sm">☕ 今日咖啡</text>
-      <text class="text-hint">{{today}}</text>
-    </view>
-    <view class="news-list">
-      <view class="news-item" wx:for="{{todayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
-        <view class="news-source badge {{item.sourceClass || 'badge-outline'}}">{{item.source}}</view>
-        <text class="news-title">{{item.titleZh || item.title}}</text>
+  <view class="section" wx:if="{{!loading && todayNews.length > 0}}">
+    <view class="section-card">
+      <view class="section-header">
+        <text class="section-title">☕ 今日咖啡</text>
+        <text class="section-date">{{today}}</text>
+      </view>
+      <view class="news-list">
+        <view class="news-item" wx:for="{{todayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
+          <text class="news-source {{item.sourceClass || ''}}">{{item.source}}</text>
+          <text class="news-title">{{item.titleZh || item.title}}</text>
+        </view>
       </view>
     </view>
   </view>
 
   <!-- Yesterday's News -->
-  <view class="card" wx:if="{{!loading && yesterdayNews.length > 0}}">
-    <view class="card-header">
-      <text class="title-sm">📰 昨日咖啡</text>
-      <text class="text-hint">{{yesterday}}</text>
-    </view>
-    <view class="news-list">
-      <view class="news-item" wx:for="{{yesterdayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
-        <view class="news-source badge {{item.sourceClass || 'badge-outline'}}">{{item.source}}</view>
-        <text class="news-title">{{item.titleZh || item.title}}</text>
+  <view class="section" wx:if="{{!loading && yesterdayNews.length > 0}}">
+    <view class="section-card">
+      <view class="section-header">
+        <text class="section-title">📰 昨日咖啡</text>
+        <text class="section-date">{{yesterday}}</text>
+      </view>
+      <view class="news-list">
+        <view class="news-item" wx:for="{{yesterdayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
+          <text class="news-source {{item.sourceClass || ''}}">{{item.source}}</text>
+          <text class="news-title">{{item.titleZh || item.title}}</text>
+        </view>
       </view>
     </view>
   </view>

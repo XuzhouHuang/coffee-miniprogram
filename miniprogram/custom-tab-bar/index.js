@@ -2,16 +2,15 @@ Component({
   data: {
     selected: 0,
     list: [
-      { pagePath: "/pages/index/index", text: "日报", icon: "📰" },
-      { pagePath: "/pages/beans/beans", text: "咖啡豆", icon: "☕" },
-      { pagePath: "/pages/knowledge/knowledge", text: "知识库", icon: "📖" },
-      { pagePath: "/pages/purchases/purchases", text: "消费", icon: "💰" }
+      { pagePath: "/pages/index/index", icon: "news" },
+      { pagePath: "/pages/beans/beans", icon: "bean" },
+      { pagePath: "/pages/knowledge/knowledge", icon: "book" },
+      { pagePath: "/pages/purchases/purchases", icon: "wallet" }
     ]
   },
   methods: {
     switchTab(e) {
-      const data = e.currentTarget.dataset
-      const url = data.path
+      const url = e.currentTarget.dataset.path
       wx.switchTab({ url })
     }
   }

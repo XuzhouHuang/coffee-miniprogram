@@ -64,6 +64,18 @@ Page({
     }
   },
 
+  goToBeans() {
+    wx.switchTab({ url: '/pages/beans/beans' })
+  },
+
+  goToKnowledge() {
+    wx.switchTab({ url: '/pages/knowledge/knowledge' })
+  },
+
+  goToPurchases() {
+    wx.switchTab({ url: '/pages/purchases/purchases' })
+  },
+
   getSourceClass(source) {
     const map = {
       'Daily Coffee News': 'source-daily-coffee-news',

@@ -8,10 +8,10 @@
     "pages/news-detail/news-detail"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#FAF8F5",
+    "navigationBarBackgroundColor": "#EDE5D8",
     "navigationBarTitleText": "面包咖啡好天气",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#FAF8F5",
+    "backgroundColor": "#EDE5D8",
     "backgroundTextStyle": "dark"
   },
   "tabBar": {

@@ -14,6 +14,7 @@
     "backgroundTextStyle": "dark"
   },
   "tabBar": {
+    "custom": true,
     "color": "#9C9490",
     "selectedColor": "#8B7355",
     "backgroundColor": "#FAF8F5",
@@ -21,21 +22,15 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "日报",
-        "iconPath": "images/tab-news.png",
-        "selectedIconPath": "images/tab-news-active.png"
+        "text": "日报"
       },
       {
         "pagePath": "pages/beans/beans",
-        "text": "咖啡豆",
-        "iconPath": "images/tab-bean.png",
-        "selectedIconPath": "images/tab-bean-active.png"
+        "text": "咖啡豆"
       },
       {
         "pagePath": "pages/knowledge/knowledge",
-        "text": "知识库",
-        "iconPath": "images/tab-book.png",
-        "selectedIconPath": "images/tab-book-active.png"
+        "text": "知识库"
       }
     ]
   },

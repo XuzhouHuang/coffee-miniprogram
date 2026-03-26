@@ -30,10 +30,10 @@ Page({
       const res = await api.request('/purchases')
       const data = res || {}
       this.setData({
-        beanPurchases: data.beanPurchases || [],
-        cafePurchases: data.cafePurchases || [],
-        equipmentPurchases: data.equipmentPurchases || [],
-        breadPurchases: data.breadPurchases || [],
+        beanPurchases: data.beanPurchases?.data || data.beanPurchases || [],
+        cafePurchases: data.cafePurchases?.data || data.cafePurchases || [],
+        equipmentPurchases: data.equipmentPurchases?.data || data.equipmentPurchases || [],
+        breadPurchases: data.breadPurchases?.data || data.breadPurchases || [],
         loading: false
       })
     } catch (err) {

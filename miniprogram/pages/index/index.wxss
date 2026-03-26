@@ -1,7 +1,7 @@
 .home {
   padding: 0 36rpx;
   padding-bottom: 130rpx;
-  background: #FFFFFF;
+  background: #F7F6F3;
 }
 
 /* Header */
@@ -86,7 +86,7 @@
 .section-label {
   font-size: 22rpx;
   font-weight: 600;
-  color: #4A90D9;
+  color: #7B8FA3;
   letter-spacing: 3rpx;
 }
 
@@ -117,7 +117,7 @@
   width: 8rpx;
   height: 8rpx;
   border-radius: 50%;
-  background: #4A90D9;
+  background: #7B8FA3;
   flex-shrink: 0;
   margin-top: 16rpx;
 }

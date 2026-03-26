@@ -1,6 +1,6 @@
 /* Global styles - Minimal, clean, thin line dividers, blue accent */
 page {
-  background-color: #FFFFFF;
+  background-color: #F7F6F3;
   color: #2C2C2C;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'SF Pro Text', sans-serif;
   font-size: 28rpx;
@@ -48,7 +48,7 @@ page {
 
 /* Blue accent */
 .text-accent {
-  color: #4A90D9;
+  color: #7B8FA3;
 }
 
 /* Badges - minimal */
@@ -66,8 +66,8 @@ page {
 }
 
 .badge-accent {
-  background: #EDF4FC;
-  color: #4A90D9;
+  background: #EEF1F5;
+  color: #7B8FA3;
 }
 
 .badge-outline {

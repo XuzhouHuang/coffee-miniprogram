@@ -17,14 +17,14 @@
   border-radius: 12rpx;
   color: #999999;
   background: transparent;
-  border: 1rpx solid #E5E2DE;
+  border: 1rpx solid #EBEBEB;
   transition: all 0.2s;
 }
 
 .tab-active {
-  color: #7B8FA3;
+  color: #3EB4E8;
   background: transparent;
-  border-color: #7B8FA3;
+  border-color: #3EB4E8;
   font-weight: 600;
 }
 
@@ -47,7 +47,7 @@
 .purchase-price {
   font-size: 28rpx;
   font-weight: 600;
-  color: #7B8FA3;
+  color: #3EB4E8;
   flex-shrink: 0;
 }
 

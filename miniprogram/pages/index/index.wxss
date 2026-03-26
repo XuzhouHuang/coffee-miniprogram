@@ -1,7 +1,7 @@
 .home {
   padding: 0 36rpx;
   padding-bottom: 130rpx;
-  background: #F7F6F3;
+  background: #F5F5F0;
 }
 
 /* Header */
@@ -36,7 +36,7 @@
 /* Thin line separator */
 .thin-line {
   height: 1rpx;
-  background: #F0F0F0;
+  background: #EBEBEB;
   margin: 0;
 }
 
@@ -86,7 +86,7 @@
 .section-label {
   font-size: 22rpx;
   font-weight: 600;
-  color: #7B8FA3;
+  color: #3EB4E8;
   letter-spacing: 3rpx;
 }
 
@@ -106,7 +106,7 @@
   align-items: flex-start;
   gap: 16rpx;
   padding: 16rpx 0;
-  border-bottom: 1rpx solid #F8F8F8;
+  border-bottom: 1rpx solid #F5F5F0;
 }
 
 .news-item:last-child {
@@ -117,7 +117,7 @@
   width: 8rpx;
   height: 8rpx;
   border-radius: 50%;
-  background: #7B8FA3;
+  background: #3EB4E8;
   flex-shrink: 0;
   margin-top: 16rpx;
 }
@@ -136,7 +136,7 @@
 
 .news-title {
   font-size: 28rpx;
-  color: #2C2C2C;
+  color: #1A1A1A;
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;

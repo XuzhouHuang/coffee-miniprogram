@@ -5,8 +5,8 @@
   left: 0;
   right: 0;
   height: 100rpx;
-  background: #F7F6F3;
-  border-top: 1rpx solid #ECEAE6;
+  background: #F5F5F0;
+  border-top: 1rpx solid #EBEBEB;
   padding-bottom: env(safe-area-inset-bottom);
   z-index: 999;
 }
@@ -32,12 +32,12 @@
 
 /* Active: muted blue accent */
 .tab-item.active view[class^="i-"] view {
-  border-color: #7B8FA3 !important;
+  border-color: #3EB4E8 !important;
 }
 .tab-item.active .i-wallet-dot,
 .tab-item.active .i-news-l1,
 .tab-item.active .i-news-l2 {
-  background: #7B8FA3 !important;
+  background: #3EB4E8 !important;
 }
 
 /* ---- News icon ---- */

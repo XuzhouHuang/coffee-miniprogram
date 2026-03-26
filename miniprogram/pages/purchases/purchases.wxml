@@ -1,0 +1,90 @@
+<view class="container">
+  <view class="page-title">
+    <text class="title-lg">💰 消费记录</text>
+  </view>
+
+  <!-- Tab switcher -->
+  <scroll-view scroll-x class="tab-switcher">
+    <view class="tab-btn {{tab === 'beans' ? 'tab-active' : ''}}" bindtap="switchTab" data-tab="beans">
+      豆子 ({{beanPurchases.length}})
+    </view>
+    <view class="tab-btn {{tab === 'cafe' ? 'tab-active' : ''}}" bindtap="switchTab" data-tab="cafe">
+      咖啡店 ({{cafePurchases.length}})
+    </view>
+    <view class="tab-btn {{tab === 'equipment' ? 'tab-active' : ''}}" bindtap="switchTab" data-tab="equipment">
+      器具 ({{equipmentPurchases.length}})
+    </view>
+    <view class="tab-btn {{tab === 'bread' ? 'tab-active' : ''}}" bindtap="switchTab" data-tab="bread">
+      面包 ({{breadPurchases.length}})
+    </view>
+  </scroll-view>
+
+  <view class="loading" wx:if="{{loading}}">
+    <text class="loading-text">加载中...</text>
+  </view>
+
+  <!-- Bean purchases -->
+  <view wx:if="{{!loading && tab === 'beans'}}">
+    <view class="empty" wx:if="{{beanPurchases.length === 0}}">暂无豆子购买记录</view>
+    <view class="purchase-card card" wx:for="{{beanPurchases}}" wx:key="id" bindtap="onBeanClick" data-bean-id="{{item.bean.id}}">
+      <view class="purchase-row">
+        <text class="purchase-name">{{item.bean.name || '未知豆子'}}</text>
+        <text class="purchase-price">¥{{item.price}}</text>
+      </view>
+      <view class="purchase-meta">
+        <text class="text-hint">{{item.weight}}g</text>
+        <text class="text-hint" wx:if="{{item.source}}">· {{item.source}}</text>
+        <text class="text-hint" wx:if="{{item.purchaseDate}}">· {{item.purchaseDate}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Cafe purchases -->
+  <view wx:if="{{!loading && tab === 'cafe'}}">
+    <view class="empty" wx:if="{{cafePurchases.length === 0}}">暂无咖啡店消费记录</view>
+    <view class="purchase-card card" wx:for="{{cafePurchases}}" wx:key="id">
+      <view class="purchase-row">
+        <view>
+          <text class="purchase-name">{{item.cafeName}}</text>
+          <text class="text-muted" style="margin-left: 12rpx;">{{item.drinkName}}</text>
+        </view>
+        <text class="purchase-price">¥{{item.price}}</text>
+      </view>
+      <view class="purchase-meta">
+        <text class="text-hint" wx:if="{{item.location}}">{{item.location}}</text>
+        <text class="text-hint" wx:if="{{item.purchaseDate}}">· {{item.purchaseDate}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Equipment purchases -->
+  <view wx:if="{{!loading && tab === 'equipment'}}">
+    <view class="empty" wx:if="{{equipmentPurchases.length === 0}}">暂无器具购买记录</view>
+    <view class="purchase-card card" wx:for="{{equipmentPurchases}}" wx:key="id">
+      <view class="purchase-row">
+        <text class="purchase-name">{{item.name}}</text>
+        <text class="purchase-price">¥{{item.price}}</text>
+      </view>
+      <view class="purchase-meta">
+        <text class="text-hint" wx:if="{{item.brand}}">{{item.brand}}</text>
+        <text class="text-hint" wx:if="{{item.source}}">· {{item.source}}</text>
+        <text class="text-hint" wx:if="{{item.purchaseDate}}">· {{item.purchaseDate}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Bread purchases -->
+  <view wx:if="{{!loading && tab === 'bread'}}">
+    <view class="empty" wx:if="{{breadPurchases.length === 0}}">暂无面包消费记录</view>
+    <view class="purchase-card card" wx:for="{{breadPurchases}}" wx:key="id">
+      <view class="purchase-row">
+        <text class="purchase-name">{{item.storeName}}</text>
+        <text class="purchase-price">¥{{item.price}}</text>
+      </view>
+      <view class="purchase-meta">
+        <text class="text-hint" wx:if="{{item.itemName}}">{{item.itemName}}</text>
+        <text class="text-hint" wx:if="{{item.purchaseDate}}">· {{item.purchaseDate}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -4,6 +4,7 @@
     "pages/beans/beans",
     "pages/bean-detail/bean-detail",
     "pages/knowledge/knowledge",
+    "pages/purchases/purchases",
     "pages/news-detail/news-detail"
   ],
   "window": {
@@ -31,6 +32,10 @@
       {
         "pagePath": "pages/knowledge/knowledge",
         "text": "知识库"
+      },
+      {
+        "pagePath": "pages/purchases/purchases",
+        "text": "消费"
       }
     ]
   },

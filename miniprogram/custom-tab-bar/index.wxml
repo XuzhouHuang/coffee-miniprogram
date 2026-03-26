@@ -3,47 +3,33 @@
     wx:for="{{list}}" wx:key="index"
     data-path="{{item.pagePath}}" data-index="{{index}}"
     bindtap="switchTab">
-    <!-- News icon - newspaper -->
-    <view class="tab-icon" wx:if="{{item.icon === 'news'}}">
-      <canvas type="2d" id="icon-news" class="icon-canvas" />
-      <view class="icon-svg">
-        <view class="line-icon news-icon">
-          <view class="news-paper"></view>
-          <view class="news-line l1"></view>
-          <view class="news-line l2"></view>
-          <view class="news-line l3"></view>
-        </view>
+    <!-- News -->
+    <view class="icon-wrap" wx:if="{{item.icon === 'news'}}">
+      <view class="i-news">
+        <view class="i-news-rect"></view>
+        <view class="i-news-l1"></view>
+        <view class="i-news-l2"></view>
       </view>
     </view>
-    <!-- Bean icon - coffee cup -->
-    <view class="tab-icon" wx:if="{{item.icon === 'bean'}}">
-      <view class="icon-svg">
-        <view class="line-icon cup-icon">
-          <view class="cup-body"></view>
-          <view class="cup-handle"></view>
-          <view class="cup-steam s1"></view>
-          <view class="cup-steam s2"></view>
-        </view>
+    <!-- Coffee -->
+    <view class="icon-wrap" wx:if="{{item.icon === 'bean'}}">
+      <view class="i-cup">
+        <view class="i-cup-body"></view>
+        <view class="i-cup-handle"></view>
       </view>
     </view>
-    <!-- Book icon -->
-    <view class="tab-icon" wx:if="{{item.icon === 'book'}}">
-      <view class="icon-svg">
-        <view class="line-icon book-icon">
-          <view class="book-cover"></view>
-          <view class="book-spine"></view>
-          <view class="book-page"></view>
-        </view>
+    <!-- Book -->
+    <view class="icon-wrap" wx:if="{{item.icon === 'book'}}">
+      <view class="i-book">
+        <view class="i-book-cover"></view>
+        <view class="i-book-spine"></view>
       </view>
     </view>
-    <!-- Wallet icon -->
-    <view class="tab-icon" wx:if="{{item.icon === 'wallet'}}">
-      <view class="icon-svg">
-        <view class="line-icon wallet-icon">
-          <view class="wallet-body"></view>
-          <view class="wallet-flap"></view>
-          <view class="wallet-coin"></view>
-        </view>
+    <!-- Wallet -->
+    <view class="icon-wrap" wx:if="{{item.icon === 'wallet'}}">
+      <view class="i-wallet">
+        <view class="i-wallet-body"></view>
+        <view class="i-wallet-dot"></view>
       </view>
     </view>
   </view>

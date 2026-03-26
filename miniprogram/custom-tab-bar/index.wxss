@@ -4,9 +4,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 110rpx;
-  background: #F5F0EA;
-  border-top: 1rpx solid #E8E0D4;
+  height: 100rpx;
+  background: #FFFFFF;
+  border-top: 1rpx solid #F0F0F0;
   padding-bottom: env(safe-area-inset-bottom);
   z-index: 999;
 }
@@ -16,149 +16,96 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16rpx 0;
-  opacity: 0.4;
-  transition: opacity 0.2s;
 }
 
-.tab-item.active {
-  opacity: 1;
-}
-
-.tab-icon {
-  width: 52rpx;
-  height: 52rpx;
-  position: relative;
-}
-
-.icon-svg {
-  width: 100%;
-  height: 100%;
-}
-
-.line-icon {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-/* ---- News (newspaper) icon ---- */
-.news-icon .news-paper {
-  position: absolute;
-  top: 4rpx;
-  left: 6rpx;
-  width: 40rpx;
+.icon-wrap {
+  width: 44rpx;
   height: 44rpx;
-  border: 2.5rpx solid #5C4A3A;
+  position: relative;
+}
+
+/* Default: light gray lines */
+.tab-item view[class^="i-"] view {
+  border-color: #CCCCCC !important;
+  background-color: transparent !important;
+}
+
+/* Active: blue accent */
+.tab-item.active view[class^="i-"] view {
+  border-color: #4A90D9 !important;
+}
+.tab-item.active .i-wallet-dot,
+.tab-item.active .i-news-l1,
+.tab-item.active .i-news-l2 {
+  background: #4A90D9 !important;
+}
+
+/* ---- News icon ---- */
+.i-news { width: 100%; height: 100%; position: relative; }
+.i-news-rect {
+  position: absolute;
+  top: 4rpx; left: 4rpx;
+  width: 36rpx; height: 36rpx;
+  border: 2rpx solid #CCCCCC;
   border-radius: 4rpx;
 }
-.news-icon .news-line {
+.i-news-l1, .i-news-l2 {
   position: absolute;
-  left: 14rpx;
-  height: 2.5rpx;
-  background: #5C4A3A;
-  border-radius: 2rpx;
+  left: 12rpx;
+  height: 2rpx;
+  background: #CCCCCC;
+  border-radius: 1rpx;
 }
-.news-icon .l1 { top: 16rpx; width: 24rpx; }
-.news-icon .l2 { top: 24rpx; width: 20rpx; }
-.news-icon .l3 { top: 32rpx; width: 24rpx; }
+.i-news-l1 { top: 16rpx; width: 20rpx; }
+.i-news-l2 { top: 24rpx; width: 14rpx; }
 
-/* ---- Coffee cup icon ---- */
-.cup-icon .cup-body {
+/* ---- Cup icon ---- */
+.i-cup { width: 100%; height: 100%; position: relative; }
+.i-cup-body {
   position: absolute;
-  bottom: 4rpx;
-  left: 8rpx;
-  width: 28rpx;
-  height: 30rpx;
-  border: 2.5rpx solid #5C4A3A;
-  border-radius: 0 0 8rpx 8rpx;
-  border-top: none;
+  bottom: 4rpx; left: 8rpx;
+  width: 22rpx; height: 26rpx;
+  border: 2rpx solid #CCCCCC;
+  border-radius: 0 0 6rpx 6rpx;
 }
-.cup-icon .cup-body::before {
-  content: '';
+.i-cup-handle {
   position: absolute;
-  top: -2.5rpx;
-  left: -2.5rpx;
-  width: 28rpx;
-  height: 2.5rpx;
-  background: #5C4A3A;
-  border-radius: 2rpx;
-}
-.cup-icon .cup-handle {
-  position: absolute;
-  bottom: 12rpx;
-  right: 6rpx;
-  width: 10rpx;
-  height: 16rpx;
-  border: 2.5rpx solid #5C4A3A;
+  bottom: 12rpx; right: 6rpx;
+  width: 8rpx; height: 14rpx;
+  border: 2rpx solid #CCCCCC;
   border-left: none;
-  border-radius: 0 6rpx 6rpx 0;
+  border-radius: 0 5rpx 5rpx 0;
 }
-.cup-icon .cup-steam {
-  position: absolute;
-  width: 2.5rpx;
-  height: 10rpx;
-  background: #5C4A3A;
-  border-radius: 2rpx;
-  opacity: 0.6;
-}
-.cup-icon .s1 { left: 16rpx; top: 2rpx; transform: rotate(-8deg); }
-.cup-icon .s2 { left: 26rpx; top: 0rpx; transform: rotate(8deg); }
 
 /* ---- Book icon ---- */
-.book-icon .book-cover {
+.i-book { width: 100%; height: 100%; position: relative; }
+.i-book-cover {
   position: absolute;
-  top: 6rpx;
-  left: 8rpx;
-  width: 34rpx;
-  height: 40rpx;
-  border: 2.5rpx solid #5C4A3A;
-  border-radius: 2rpx 6rpx 6rpx 2rpx;
+  top: 4rpx; left: 6rpx;
+  width: 30rpx; height: 36rpx;
+  border: 2rpx solid #CCCCCC;
+  border-radius: 2rpx 5rpx 5rpx 2rpx;
 }
-.book-icon .book-spine {
+.i-book-spine {
   position: absolute;
-  top: 6rpx;
-  left: 8rpx;
-  width: 2.5rpx;
-  height: 40rpx;
-  background: #5C4A3A;
-}
-.book-icon .book-page {
-  position: absolute;
-  top: 16rpx;
-  left: 18rpx;
-  width: 16rpx;
-  height: 2.5rpx;
-  background: #5C4A3A;
-  border-radius: 2rpx;
+  top: 4rpx; left: 6rpx;
+  width: 2rpx; height: 36rpx;
+  background: #CCCCCC;
 }
 
 /* ---- Wallet icon ---- */
-.wallet-icon .wallet-body {
+.i-wallet { width: 100%; height: 100%; position: relative; }
+.i-wallet-body {
   position: absolute;
-  top: 10rpx;
-  left: 6rpx;
-  width: 38rpx;
-  height: 28rpx;
-  border: 2.5rpx solid #5C4A3A;
-  border-radius: 6rpx;
+  top: 8rpx; left: 4rpx;
+  width: 36rpx; height: 26rpx;
+  border: 2rpx solid #CCCCCC;
+  border-radius: 5rpx;
 }
-.wallet-icon .wallet-flap {
+.i-wallet-dot {
   position: absolute;
-  top: 6rpx;
-  left: 10rpx;
-  width: 30rpx;
-  height: 8rpx;
-  border: 2.5rpx solid #5C4A3A;
-  border-bottom: none;
-  border-radius: 6rpx 6rpx 0 0;
-}
-.wallet-icon .wallet-coin {
-  position: absolute;
-  top: 20rpx;
-  right: 12rpx;
-  width: 10rpx;
-  height: 10rpx;
-  border: 2.5rpx solid #5C4A3A;
+  top: 18rpx; right: 10rpx;
+  width: 6rpx; height: 6rpx;
+  background: #CCCCCC;
   border-radius: 50%;
 }

@@ -1,94 +1,95 @@
-/* Global styles - Nordic magazine feel */
+/* Global styles - Minimal, clean, thin line dividers, blue accent */
 page {
-  background-color: #EDE5D8;
-  color: #3A2E25;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Noto Serif SC', serif;
+  background-color: #FFFFFF;
+  color: #2C2C2C;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'SF Pro Text', sans-serif;
   font-size: 28rpx;
   line-height: 1.6;
 }
 
 .container {
-  padding: 24rpx 32rpx;
-}
-
-/* Cards */
-.card {
-  background: #FFFFFF;
-  border-radius: 16rpx;
-  padding: 32rpx;
-  margin-bottom: 24rpx;
-  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.04);
+  padding: 24rpx 36rpx;
+  padding-bottom: 130rpx;
 }
 
 /* Typography */
 .title-lg {
-  font-size: 40rpx;
-  font-weight: 700;
-  color: #2C2825;
-  letter-spacing: -0.5rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #1A1A1A;
 }
 
 .title-md {
-  font-size: 32rpx;
+  font-size: 30rpx;
   font-weight: 600;
-  color: #2C2825;
+  color: #1A1A1A;
 }
 
 .title-sm {
-  font-size: 28rpx;
-  font-weight: 600;
-  color: #6B6058;
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #666666;
 }
 
 .text-body {
   font-size: 28rpx;
-  color: #6B6058;
+  color: #333333;
 }
 
 .text-muted {
   font-size: 24rpx;
-  color: #9C9490;
+  color: #999999;
 }
 
 .text-hint {
   font-size: 22rpx;
-  color: #B8B0A8;
+  color: #BBBBBB;
 }
 
-/* Badges */
+/* Blue accent */
+.text-accent {
+  color: #4A90D9;
+}
+
+/* Badges - minimal */
 .badge {
   display: inline-block;
   font-size: 20rpx;
   padding: 4rpx 12rpx;
-  border-radius: 8rpx;
+  border-radius: 6rpx;
   font-weight: 500;
 }
 
-.badge-warm {
-  background: #EBE5DD;
-  color: #8B7355;
+.badge-default {
+  background: #F5F5F5;
+  color: #666666;
+}
+
+.badge-accent {
+  background: #EDF4FC;
+  color: #4A90D9;
 }
 
 .badge-outline {
   background: transparent;
-  border: 1rpx solid #E8E2DA;
-  color: #9C9490;
+  border: 1rpx solid #E5E5E5;
+  color: #999999;
 }
 
-/* Source colors for news */
-.source-daily-coffee-news { background: #E8D5C4; color: #8B5E3C; }
-.source-perfect-daily-grind { background: #D4E8D4; color: #3C6B3C; }
-.source-sprudge { background: #D4D8E8; color: #3C4A6B; }
-.source-coffee-review { background: #E8E4D4; color: #6B5E3C; }
-.source-fresh-cup { background: #E4D4E8; color: #6B3C6B; }
-.source-barista-hustle { background: #D4E4E8; color: #3C5E6B; }
-
-/* Divider */
+/* Thin line divider */
 .divider {
   height: 1rpx;
-  background: linear-gradient(to right, transparent, rgba(200,168,130,0.15), transparent);
+  background: #EEEEEE;
   margin: 24rpx 0;
 }
+
+/* Source colors for news - subtle */
+.source-daily-coffee-news { background: #FFF8F2; color: #C4875C; }
+.source-perfect-daily-grind { background: #F2F8F2; color: #5C8B5C; }
+.source-sprudge { background: #F2F4F8; color: #5C6B8B; }
+.source-coffee-review { background: #F8F6F2; color: #8B7D5C; }
+.source-fresh-cup { background: #F6F2F8; color: #7D5C8B; }
+.source-barista-hustle { background: #F2F6F8; color: #5C7D8B; }
 
 /* Loading */
 .loading {
@@ -99,14 +100,14 @@ page {
 }
 
 .loading-text {
-  color: #B8B0A8;
+  color: #BBBBBB;
   font-size: 26rpx;
 }
 
-/* Empty state */
+/* Empty */
 .empty {
   text-align: center;
   padding: 120rpx 0;
-  color: #B8B0A8;
-  font-size: 28rpx;
+  color: #CCCCCC;
+  font-size: 26rpx;
 }

@@ -1,29 +1,34 @@
-<view class="home-container">
-  <!-- Hero -->
-  <view class="hero">
-    <text class="hero-icon">☕</text>
-    <text class="hero-title">COFFEE JOURNAL</text>
-    <text class="hero-sub">面包 · 咖啡 · 好天气</text>
+<view class="home">
+  <!-- Header -->
+  <view class="header">
+    <view class="header-top">
+      <text class="brand-name">COFFEE JOURNAL</text>
+      <text class="brand-dot">·</text>
+      <text class="brand-sub">面包咖啡好天气</text>
+    </view>
   </view>
 
-  <!-- Quick entry -->
-  <view class="entry-grid">
-    <view class="entry-card" bindtap="goToBeans">
-      <text class="entry-icon">🫘</text>
-      <text class="entry-label">咖啡豆</text>
-      <text class="entry-sub">My Beans</text>
+  <view class="thin-line"></view>
+
+  <!-- Quick nav row -->
+  <view class="nav-row">
+    <view class="nav-item" bindtap="goToBeans">
+      <text class="nav-icon">☕</text>
+      <text class="nav-label">咖啡豆</text>
     </view>
-    <view class="entry-card" bindtap="goToKnowledge">
-      <text class="entry-icon">📖</text>
-      <text class="entry-label">知识库</text>
-      <text class="entry-sub">Knowledge</text>
+    <view class="nav-sep"></view>
+    <view class="nav-item" bindtap="goToKnowledge">
+      <text class="nav-icon">📖</text>
+      <text class="nav-label">知识库</text>
     </view>
-    <view class="entry-card" bindtap="goToPurchases">
-      <text class="entry-icon">💰</text>
-      <text class="entry-label">消费</text>
-      <text class="entry-sub">Spending</text>
+    <view class="nav-sep"></view>
+    <view class="nav-item" bindtap="goToPurchases">
+      <text class="nav-icon">📝</text>
+      <text class="nav-label">消费记录</text>
     </view>
   </view>
+
+  <view class="thin-line"></view>
 
   <!-- Loading -->
   <view class="loading" wx:if="{{loading}}">
@@ -31,31 +36,35 @@
   </view>
 
   <!-- Today's News -->
-  <view class="section" wx:if="{{!loading && todayNews.length > 0}}">
-    <view class="section-card">
-      <view class="section-header">
-        <text class="section-title">☕ 今日咖啡</text>
-        <text class="section-date">{{today}}</text>
-      </view>
-      <view class="news-list">
-        <view class="news-item" wx:for="{{todayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
-          <text class="news-source {{item.sourceClass || ''}}">{{item.source}}</text>
+  <view class="news-section" wx:if="{{!loading && todayNews.length > 0}}">
+    <view class="section-header">
+      <text class="section-label">TODAY</text>
+      <text class="section-date">{{today}}</text>
+    </view>
+    <view class="news-list">
+      <view class="news-item" wx:for="{{todayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
+        <view class="news-dot"></view>
+        <view class="news-content">
+          <text class="news-source-text">{{item.source}}</text>
           <text class="news-title">{{item.titleZh || item.title}}</text>
         </view>
       </view>
     </view>
   </view>
 
+  <view class="thin-line" wx:if="{{!loading && todayNews.length > 0 && yesterdayNews.length > 0}}"></view>
+
   <!-- Yesterday's News -->
-  <view class="section" wx:if="{{!loading && yesterdayNews.length > 0}}">
-    <view class="section-card">
-      <view class="section-header">
-        <text class="section-title">📰 昨日咖啡</text>
-        <text class="section-date">{{yesterday}}</text>
-      </view>
-      <view class="news-list">
-        <view class="news-item" wx:for="{{yesterdayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
-          <text class="news-source {{item.sourceClass || ''}}">{{item.source}}</text>
+  <view class="news-section" wx:if="{{!loading && yesterdayNews.length > 0}}">
+    <view class="section-header">
+      <text class="section-label">YESTERDAY</text>
+      <text class="section-date">{{yesterday}}</text>
+    </view>
+    <view class="news-list">
+      <view class="news-item" wx:for="{{yesterdayNews}}" wx:key="id" bindtap="onNewsClick" data-item="{{item}}">
+        <view class="news-dot"></view>
+        <view class="news-content">
+          <text class="news-source-text">{{item.source}}</text>
           <text class="news-title">{{item.titleZh || item.title}}</text>
         </view>
       </view>
